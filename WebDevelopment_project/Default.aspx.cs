@@ -17,8 +17,6 @@ namespace WebDevelopment_project
         {
             messageboxred.Text = "";
             messagebox.Text = "";
-
-
         }
         private void DataBase_connection()
         {
@@ -50,7 +48,9 @@ namespace WebDevelopment_project
                 Random rnd = new Random();
                 int ID = rnd.Next();
                 cmd.Parameters.AddWithValue("@ID", ID);
-                cmd.Parameters.AddWithValue("@AccountCreated",DateTime.Now);
+                DateTime ClientDateTime = DateTime.Now;
+                DateTime _localTime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(ClientDateTime, "India Standard Time");
+                cmd.Parameters.AddWithValue("@AccountCreated",_localTime);
                 int result = cmd.ExecuteNonQuery();
                 if (result > 0)
                 {

@@ -28,7 +28,7 @@
             <asp:TextBox ID="password" TextMode="Password" CssClass="form-control form-control-lg" runat="server"></asp:TextBox>
             <asp:Label ID="LabelPassword" CssClass="form-label" runat="server"  Text="Password"/>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="password" ErrorMessage="Please Enter Password"></asp:RequiredFieldValidator>
-              <asp:RangeValidator ID="RangeValidator1"  runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>
+              
           </div>
 
           <div class="d-flex justify-content-around align-items-center mb-4">
