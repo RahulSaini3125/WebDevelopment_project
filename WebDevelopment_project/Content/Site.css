@@ -83,3 +83,72 @@ button {
 .dd-margin{
     margin-right:60px;
 }
+
+.user-info-modal{
+    display:flex;
+    position:absolute;
+    width:100%;
+    min-height:90vh;
+    justify-content:center;
+    text-align:center;
+}
+
+.user-info-modal-dialog {
+    display: flex;
+    flex-flow:column;
+    justify-content:space-between;
+    overflow:hidden;
+    margin-top: 20px;
+    width: 50%;
+    height: 55vh;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.user-info-modal-header{
+    margin-top:15px;
+}
+
+.user-info-modal-body {
+    padding:50px 190px 50px 120px;
+}
+
+.user-info-modal-body-label{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+}
+
+.user-info-modal-footer {
+    display:flow;
+    float:right;
+}
+
+.user-btn{
+    margin-left:40px;
+    margin-right:20px;
+    border:none;
+    padding:5px 25px 5px 25px;
+    border-radius:10px;
+    margin-bottom: 10px;
+}
+
+.user-deactivate:hover{
+    background-color:#ff3333;
+}
+
+.user-delete:hover {
+    background-color: #ff3333;
+}
+
+.user-close:hover {
+    background-color: #58fbf9;
+}
+
+
+.messagealert{
+    display:flex;
+    flex-direction:column;
+    padding-top:60px;
+}
