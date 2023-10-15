@@ -65,3 +65,21 @@ button {
     padding: 20px;
 }
 
+.Gridview{
+    display: inline-table;
+}
+
+.Gridview-Header{
+    padding: 5px;
+    text-align:center;
+    color:deepskyblue;
+}
+
+.Gridview-item{
+    text-align:center;
+    padding:10px;
+}
+
+.dd-margin{
+    margin-right:60px;
+}

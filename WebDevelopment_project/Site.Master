@@ -38,10 +38,22 @@
       </li>
         -->
     </ul>
-    <span class="navbar-text">
-      <!--<a class="nav-link" href="Login.aspx">Logout</a> -->
-      <asp:LinkButton CssClass="nav-link" ID="LinkButton1" OnClick="LinkButton1_Click" runat="server">Logout</asp:LinkButton>
-    </span>
+        <div class="dropdown dd-margin">
+            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+               User Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <asp:LinkButton CssClass="dropdown-item" ID="profile" OnClick="Profile_Click" runat="server"> Profile</asp:LinkButton>
+                <asp:LinkButton CssClass="dropdown-item" ID="logout" OnClick="logout_Click" runat="server">Logout</asp:LinkButton>
+                <% if (Page.Title != "Registrations" && Page.Title != "Login") {  %>
+                <asp:HiddenField ID="HiddenField1" runat="server" />
+                    <% if (HiddenField1.Value == "True"){  %>
+                <asp:LinkButton CssClass="dropdown-item" ID="admin" OnClick="admin_Click" runat="server">Administration</asp:LinkButton>
+                <%} %>
+                <%} %>
+
+            </ul>
+        </div>
   </div>
 </nav>
     <%} %>
