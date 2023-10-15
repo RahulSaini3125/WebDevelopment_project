@@ -21,6 +21,7 @@ namespace WebDevelopment_project
             {
                 Response.Redirect("login.aspx");
             }
+            Admin.Text = Session["AdminAccess"].ToString();
             conn = new SqlConnection("Server=tcp:webdevcu.database.windows.net,1433;Initial Catalog=WebDevelopmentDB;Persist Security Info=False;User ID=RahulSaini3125;Password=RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             conn.Open();
             adapter = new SqlDataAdapter("Select * from dbo.Userinfo", conn);
