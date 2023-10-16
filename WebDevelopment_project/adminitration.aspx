@@ -27,11 +27,15 @@
             <asp:Label ID="UserEmail" runat="server"></asp:Label>
           </div>
           <div class="user-info-modal-body-label" >
-            <asp:Label ID="ACDT" runat="server" CssClass="user-info-modal-body-label" Text="Account Created Date and time:"></asp:Label>
+               <asp:Label ID="admins" runat="server" CssClass="user-info-modal-body-label" Text="Status:"></asp:Label>
+               <asp:Label ID="useradmin" runat="server"></asp:Label>
+        </div>
+          <div class="user-info-modal-body-label" >
+            <asp:Label ID="ACDT" runat="server" CssClass="user-info-modal-body-label" Text="Created Date:"></asp:Label>
             <asp:Label ID="UserACDT" runat="server"></asp:Label>
           </div>
           <div class="user-info-modal-body-label" >
-            <asp:Label ID="LLDT" runat="server" CssClass="user-info-modal-body-label" Text="Last Login Date and Time:"></asp:Label>
+            <asp:Label ID="LLDT" runat="server" CssClass="user-info-modal-body-label" Text="Last Login:"></asp:Label>
             <asp:Label ID="UserLLDT" runat="server"></asp:Label>
           </div>
           <div class="user-info-modal-body-label" >
@@ -98,7 +102,8 @@
                     ADMINISTRATOR
                 </h1>
             </center>
-        <asp:GridView ID="GridView1" CssClass="Gridview" AutoGenerateColumns="false" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" runat="server">
+            <div class="Gridview-div" >
+        <asp:GridView ID="GridView1" CssClass="Gridview" AutoGenerateColumns="false" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" Width="100%" runat="server">
         <Columns >
             <asp:BoundField DataField="Id" HeaderStyle-CssClass="Gridview-Header Userid" ItemStyle-CssClass="Gridview-item "  HeaderText="User Id" />
             <asp:BoundField DataField="Name" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" HeaderText="User Name" />
@@ -106,6 +111,7 @@
             <asp:CommandField ShowSelectButton="true" HeaderText="Select Account" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" />
         </Columns>
         </asp:GridView>
+            </div>
         </section>
 
     

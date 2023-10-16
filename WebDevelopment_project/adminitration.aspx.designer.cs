@@ -96,6 +96,24 @@ namespace WebDevelopment_project
         protected global::System.Web.UI.WebControls.Label UserEmail;
 
         /// <summary>
+        /// admins control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label admins;
+
+        /// <summary>
+        /// useradmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label useradmin;
+
+        /// <summary>
         /// ACDT control.
         /// </summary>
         /// <remarks>

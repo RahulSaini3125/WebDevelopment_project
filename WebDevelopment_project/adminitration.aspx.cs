@@ -18,6 +18,7 @@ namespace WebDevelopment_project
         DataSet ds;
         DataTable dt;
         SqlCommand sql;
+        String ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["ID"] == null)
@@ -28,13 +29,16 @@ namespace WebDevelopment_project
            selectalert.Visible = false;
            messagealertdone.Visible = false;
             messagealertundone.Visible = false;
-            // Local Host String......
-            String ConnectionString = "Data Source = localhost; Initial Catalog = master; Integrated Security = True";
-
-
-            // Azure String
-            // Request to you enable this when site is hosting otherwise use local host string....
-            //String connectionString = "Server=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;Persist Security Info=False;User ID=Rahulsaini3125;Password= RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000000;";
+            if (Environment.MachineName.ToString() == "RAHUL-HP-LAPTOP")
+            {
+                // localhost database string
+                ConnectionString = "Data Source=localhost;Initial Catalog=master;Integrated Security=True";
+            }
+            else
+            {
+                //Delopment database string
+                ConnectionString = "Server=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;Persist Security Info=False;User ID=Rahulsaini3125;Password= RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000000;";
+            }
             conn = new SqlConnection(ConnectionString);
             conn.Open();
             adapter = new SqlDataAdapter("Select * from dbo.Userinfo", conn);
@@ -59,6 +63,7 @@ namespace WebDevelopment_project
                     UserEmail.Text = dr["Email"].ToString();
                     UserACDT.Text = dr["Account_Create"].ToString();
                     UserLLDT.Text = dr["LastLogin"].ToString();
+                    useradmin.Text = dr["AdminAccess"].ToString();
                     if (dr["Account_Status"].ToString() == "True")
                     {
                         UserStatus.Text = "Activate";
