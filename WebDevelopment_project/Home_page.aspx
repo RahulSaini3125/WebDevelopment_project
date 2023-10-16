@@ -3,4 +3,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <h1> This is Home Page...</h1>
         <asp:Label ID="UserName" runat="server" ></asp:Label>
+        <asp:Label ID="Label2" runat="server" ></asp:Label>
 </asp:Content>

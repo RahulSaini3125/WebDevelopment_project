@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="adminitration.aspx.cs" Inherits="WebDevelopment_project.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Label ID="Admin" runat="server" Visible="false" Enabled="false" ></asp:Label>
+    <asp:Label ID="Label2" runat="server"  ></asp:Label>
+
     <% if (Admin.Text == "True")
         {  %>
     <!-- ************************************-->
@@ -31,24 +33,28 @@
           <div class="user-info-modal-body-label" >
             <asp:Label ID="LLDT" runat="server" CssClass="user-info-modal-body-label" Text="Last Login Date and Time:"></asp:Label>
             <asp:Label ID="UserLLDT" runat="server"></asp:Label>
-
+          </div>
+          <div class="user-info-modal-body-label" >
+            <asp:Label ID="Status" runat="server" CssClass="user-info-modal-body-label" Text="Status:"></asp:Label>
+            <asp:Label ID="UserStatus" runat="server"></asp:Label>
           </div>
 
       </div>
         <hr />
       <div class="user-info-modal-footer">
-          <asp:Button ID="Deactivate"  CssClass=" user-btn user-deactivate" runat="server" Text="Deactivate" />
+          <% if (UserStatus.Text == "Activate")
+              { %>
+          <asp:Button ID="Deactivate"  CssClass=" user-btn user-deactivate" OnClick="Deactivate_Click" runat="server" Text="Deactivate" />
+          <% } %>
+          <% else
+              {  %>
+          <asp:Button ID="activate"  CssClass=" user-btn user-activate" OnClick="activate_Click" runat="server" Text="Activate" />
+          <% } %>
           <asp:Button ID="Delete" CssClass="user-delete user-btn" OnClick="Delete_Click" runat="server" Text="Delete" />
           <asp:Button ID="Close" CssClass="user-close user-btn " OnClick="Close_Click"  runat="server" Text="Close" />
       </div>
     </div>
   </div>
-        <div runat="server" id="doneMessage">
-            <asp:Label ID="Done" runat="server" Text="Update Successfully"></asp:Label>
-        </div>
-        <div runat="server" visible="false" id="notdoneMessage">
-         <asp:Label ID="notdone" runat="server" Text="Error"></asp:Label>
-    </div>
 </div>
 
     <!--**************************************************-->
@@ -101,7 +107,6 @@
         </Columns>
         </asp:GridView>
         </section>
-<!-- Modal -->
 
     
     

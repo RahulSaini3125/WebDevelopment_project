@@ -24,6 +24,15 @@ namespace WebDevelopment_project
         protected global::System.Web.UI.WebControls.Label Admin;
 
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
         /// selectalert control.
         /// </summary>
         /// <remarks>
@@ -123,6 +132,24 @@ namespace WebDevelopment_project
         protected global::System.Web.UI.WebControls.Label UserLLDT;
 
         /// <summary>
+        /// Status control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Status;
+
+        /// <summary>
+        /// UserStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UserStatus;
+
+        /// <summary>
         /// Deactivate control.
         /// </summary>
         /// <remarks>
@@ -130,6 +157,15 @@ namespace WebDevelopment_project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Deactivate;
+
+        /// <summary>
+        /// activate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button activate;
 
         /// <summary>
         /// Delete control.
@@ -148,42 +184,6 @@ namespace WebDevelopment_project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Close;
-
-        /// <summary>
-        /// doneMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl doneMessage;
-
-        /// <summary>
-        /// Done control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Done;
-
-        /// <summary>
-        /// notdoneMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl notdoneMessage;
-
-        /// <summary>
-        /// notdone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label notdone;
 
         /// <summary>
         /// messagealertdone control.

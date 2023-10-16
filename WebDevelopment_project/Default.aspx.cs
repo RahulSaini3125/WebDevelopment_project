@@ -13,6 +13,11 @@ namespace WebDevelopment_project
 {
     public partial class _Default : Page
     {
+        DataSet ds;
+        DataTable dt;
+        SqlDataAdapter sqlDataAdapter;
+        SqlConnection con;
+        String ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             messageboxred.Text = "";
@@ -20,17 +25,23 @@ namespace WebDevelopment_project
         }
         private void DataBase_connection()
         {
-            String ConnectionString = "Server=tcp:webdevcu.database.windows.net,1433;Initial Catalog=WebDevelopmentDB;Persist Security Info=False;User ID=RahulSaini3125;Password=RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000;";
-            SqlConnection con = new SqlConnection(ConnectionString);
+            if (Environment.MachineName.ToString() == "RAHUL-HP-LAPTOP")
+            {
+                // localhost database string
+                ConnectionString = "Data Source=localhost;Initial Catalog=master;Integrated Security=True";
+            }
+            else
+            {
+                //Delopment database string
+                ConnectionString = "Server=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;Persist Security Info=False;User ID=Rahulsaini3125;Password= RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000000;";
+            }
+            con = new SqlConnection(ConnectionString);
             con.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * from dbo.Userinfo", con);
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-            adapter.Fill(ds, "userinformation");
+            sqlDataAdapter = new SqlDataAdapter("Select * from dbo.Userinfo", con);
+            ds = new DataSet();
+            dt = new DataTable();
+            sqlDataAdapter.Fill(ds, "userinformation");
             dt = ds.Tables["userinformation"];
-            //"Data Source = RAHUL-HP-LAPTOP\\SQLEXPRESS;" +
-            //"Initial Catalog = WebDevelopment;" +
-            //"Integrated Security= True;";
             try
             {
                 String query = "INSERT INTO dbo.Userinfo (id,Email, Name, Password,Account_Create) VALUES ( @Id,@UserEmail, @UserName, @Userpassword, @AccountCreated)";

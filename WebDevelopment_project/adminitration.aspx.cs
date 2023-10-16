@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.EnterpriseServices.CompensatingResourceManager;
+using System.Diagnostics;
 
 namespace WebDevelopment_project
 {
@@ -16,6 +17,7 @@ namespace WebDevelopment_project
         SqlDataAdapter adapter;
         DataSet ds;
         DataTable dt;
+        SqlCommand sql;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["ID"] == null)
@@ -26,7 +28,14 @@ namespace WebDevelopment_project
            selectalert.Visible = false;
            messagealertdone.Visible = false;
             messagealertundone.Visible = false;
-            conn = new SqlConnection("Server=tcp:webdevcu.database.windows.net,1433;Initial Catalog=WebDevelopmentDB;Persist Security Info=False;User ID=RahulSaini3125;Password=RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            // Local Host String......
+            String ConnectionString = "Data Source = localhost; Initial Catalog = master; Integrated Security = True";
+
+
+            // Azure String
+            // Request to you enable this when site is hosting otherwise use local host string....
+            //String connectionString = "Server=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;Persist Security Info=False;User ID=Rahulsaini3125;Password= RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000000;";
+            conn = new SqlConnection(ConnectionString);
             conn.Open();
             adapter = new SqlDataAdapter("Select * from dbo.Userinfo", conn);
             ds = new DataSet();
@@ -50,6 +59,14 @@ namespace WebDevelopment_project
                     UserEmail.Text = dr["Email"].ToString();
                     UserACDT.Text = dr["Account_Create"].ToString();
                     UserLLDT.Text = dr["LastLogin"].ToString();
+                    if (dr["Account_Status"].ToString() == "True")
+                    {
+                        UserStatus.Text = "Activate";
+                    }
+                    else
+                    {
+                        UserStatus.Text = "Deactivate";
+                    }
                 }
             } 
         }
@@ -59,7 +76,7 @@ namespace WebDevelopment_project
             conn.Open();
             try 
             {
-                SqlCommand sql = new SqlCommand("delete from dbo.Userinfo where Id = @userid", conn);
+                sql = new SqlCommand("delete from dbo.Userinfo where Id = @userid", conn);
                 sql.Parameters.AddWithValue("@userid", User_id.Text);
                 sql.ExecuteNonQuery();
                 selectalert.Visible = false;
@@ -75,6 +92,26 @@ namespace WebDevelopment_project
         protected void Close_Click(object sender, EventArgs e)
         {
             selectalert.Visible = false;
+        }
+
+        protected void Deactivate_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            String Query_deactivate = "Update dbo.Userinfo  SET Account_Status = 0 where Id = @userid ";
+            sql = new SqlCommand(Query_deactivate, conn);
+            sql.Parameters.AddWithValue("@userid", User_id.Text);
+            sql.ExecuteNonQuery();
+            messagealertdone.Visible = true;
+        }
+
+        protected void activate_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            String Query_deactivate = "Update dbo.Userinfo  SET Account_Status = 1 where Id = @userid ";
+            sql = new SqlCommand(Query_deactivate, conn);
+            sql.Parameters.AddWithValue("@userid", User_id.Text);
+            sql.ExecuteNonQuery();
+            messagealertdone.Visible = true;
         }
     }
 }
