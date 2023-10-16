@@ -102,7 +102,7 @@ button {
     overflow:hidden;
     margin-top: 20px;
     width: 48%;
-    height: 55vh;
+    height: fit-content;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -113,7 +113,7 @@ button {
 }
 
 .user-info-modal-body {
-    padding:40px 145px 35px 145px;
+    padding:35px 145px 30px 145px;
 }
 
 .user-info-modal-body-label{
@@ -133,7 +133,7 @@ button {
     border:none;
     padding:5px 25px 5px 25px;
     border-radius:10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .user-deactivate:hover{
