@@ -7,6 +7,10 @@
     min-height: 60vh;
 }
 
+.dd-margin{
+    margin-right:50px;
+}
+
 *,
 *::before,
 *::after {
@@ -157,7 +161,7 @@ button {
 
 @media (max-width : 999px){
     .user-info-modal-dialog{
-        height:55vh;
+        height:fit-content;
         width:98%;
     }
     .user-info-modal-body {
