@@ -20,7 +20,7 @@
 <body>
     <form runat="server">
 
-    <% if (Page.Title != "Registrations" && Page.Title != "Login") {  %>
+    <% if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login") {  %>
     <nav class="navbar navbar-light navbar-expand-lg " style="background-color: #e3f2fd";>
   <a class="navbar-brand" href="Home_page.aspx"> My Site </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

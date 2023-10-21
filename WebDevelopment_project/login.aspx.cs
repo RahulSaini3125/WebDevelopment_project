@@ -49,23 +49,35 @@ namespace WebDevelopment_project
             {
                 if (dr["Email"].ToString() == this.Email.Text && dr["Password"].ToString() == this.password.Text)
                 {
-                    conn.Open();
-                    String query = "Update dbo.Userinfo SET Lastlogin = @lastlogin Where id = @ID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    DateTime ClientDateTime = DateTime.Now;
-                    DateTime _localTime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(ClientDateTime, "India Standard Time");
-                    cmd.Parameters.AddWithValue("@lastlogin", _localTime);
-                    cmd.Parameters.AddWithValue("@ID", dr["Id"].ToString());
-                    cmd.ExecuteNonQuery();
                     if (dr["Account_Status"].ToString() == "False")
                     {
                         messageboxred.Text = "Your Account is Deactivate";
                     }
                     else 
                     {
+                        conn.Open();
+                        String query = "Update dbo.Userinfo SET Lastlogin = @lastlogin Where id = @ID";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        DateTime ClientDateTime = DateTime.Now;
+                        DateTime _localTime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(ClientDateTime, "India Standard Time");
+                        cmd.Parameters.AddWithValue("@lastlogin", _localTime);
+                        cmd.Parameters.AddWithValue("@ID", dr["Id"].ToString());
+                        cmd.ExecuteNonQuery();
                         Session["ID"] = dr["id"].ToString();
                         Session["Name"] = dr["Name"].ToString();
                         Session["AdminAccess"] = dr["AdminAccess"].ToString();
+                        Session["Email"] = dr["Email"].ToString();
+                        Session["Create_date"] = dr["Account_Create"].ToString();
+                        Session["password"] = dr["Password"].ToString();
+                        if (dr["Account_Status"].ToString() == "True")
+                        {
+                            Session["Status"] = "Activate";
+                        }
+                        else
+                        {
+                            Session["Status"] = "Deactivate";
+                        }
+                        
                         conn.Close();
                         Response.Redirect("Home_page.aspx");
                     }

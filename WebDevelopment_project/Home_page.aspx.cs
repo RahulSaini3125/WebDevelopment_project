@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.FriendlyUrls;
 using System.Reflection.Emit;
+using Microsoft.Ajax.Utilities;
 
 namespace WebDevelopment_project
 {
@@ -16,6 +17,7 @@ namespace WebDevelopment_project
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session["ID"] == null )
             {
                 Response.Redirect("login.aspx");

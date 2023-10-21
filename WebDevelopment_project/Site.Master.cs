@@ -17,7 +17,7 @@ namespace WebDevelopment_project
    
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.Title != "Registrations" && Page.Title != "Login")
+            if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login")
             {
                 HiddenField1.Value = Session["AdminAccess"].ToString();
             }
@@ -27,12 +27,15 @@ namespace WebDevelopment_project
             Session["ID"] = null;
             Session["Name"] = null;
             Session["AdminAccess"] = null;
+            Session["Email"] = null ;
+            Session["Create_date"] = null;
+            Session["password"] = null;
             Response.Redirect("login.aspx");
         }
 
         protected void Profile_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("ProfilePage.aspx");
         }
 
         protected void admin_Click(object sender, EventArgs e)
