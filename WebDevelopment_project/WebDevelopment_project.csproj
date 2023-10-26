@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Accountdelete.aspx" />
+    <Content Include="download.svg" />
     <Content Include="favicon_dil.ico" />
     <Content Include="Calculator.aspx" />
     <Content Include="Content\Site.css" />

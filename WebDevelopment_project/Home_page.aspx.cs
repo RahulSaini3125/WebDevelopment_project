@@ -23,7 +23,6 @@ namespace WebDevelopment_project
                 Response.Redirect("login.aspx");
             }
             UserName.Text = Session["Name"].ToString();
-            Label2.Text = Environment.MachineName.ToString();
         }
     }
 }
