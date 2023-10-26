@@ -18,7 +18,7 @@ namespace WebDevelopment_project
         }
         protected void Profile_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("ProfilePage.aspx");
         }
 
         protected void admin_Click(object sender, EventArgs e)
