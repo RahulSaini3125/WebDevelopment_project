@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Net.Mail;
 using System.Net;
 using System.Data;
-
+//Data Source=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;User Id=RahulSaini3125@webdevservers;Password=RahulSaini@in
 namespace WebDevelopment_project
 {
     public partial class _Default : Page
@@ -33,7 +33,7 @@ namespace WebDevelopment_project
             else
             {
                 //Delopment database string
-                ConnectionString = "Server=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;Persist Security Info=False;User ID=Rahulsaini3125;Password= RahulSaini@in;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=3000000;";
+                ConnectionString = "Data Source=tcp:webdevservers.database.windows.net,1433;Initial Catalog=MasterSQL;User Id=RahulSaini3125@webdevservers;Password=RahulSaini@in";
             }
             con = new SqlConnection(ConnectionString);
             con.Open();

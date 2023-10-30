@@ -144,7 +144,7 @@
             <asp:CommandField ShowSelectButton="true" HeaderText="Select Account" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" />
         </Columns>
         </asp:GridView>
-        <asp:GridView ID="GridView2" OnSelectedIndexChanging="GridView2_SelectedIndexChanging" CssClass="Gridview" Width="100%" runat="server">
+        <asp:GridView ID="GridView2" RowStyle-CssClass="Gridview-item" HeaderStyle-CssClass="Gridview-Header"  OnSelectedIndexChanging="GridView2_SelectedIndexChanging" CssClass="Gridview" Width="100%" runat="server">
             <Columns>
             <asp:CommandField ShowSelectButton="true" HeaderText="Select Account" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" />
             </Columns>

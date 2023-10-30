@@ -27,13 +27,13 @@ namespace WebDevelopment_project
             String pathxml = "dataxml.xml";
             xmlDocument.Load(Server.MapPath(pathxml));
             XmlElement feedback = xmlDocument.CreateElement("Feedback_Details");
-            XmlElement name = xmlDocument.CreateElement("name");
+            XmlElement name = xmlDocument.CreateElement("Name");
             name.InnerText = username.Text;
-            XmlElement email = xmlDocument.CreateElement("email");
+            XmlElement email = xmlDocument.CreateElement("Email");
             email.InnerText = useremail.Text;
             XmlElement subject = xmlDocument.CreateElement("Subject");
             subject.InnerText = usersubject.Text;
-            XmlElement message = xmlDocument.CreateElement("message");
+            XmlElement message = xmlDocument.CreateElement("Message");
             message.InnerText = usermessage.Text;
             feedback.AppendChild(name);
             feedback.AppendChild(email);
