@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.EnterpriseServices.CompensatingResourceManager;
 using System.Diagnostics;
+using System.Xml;
 
 namespace WebDevelopment_project
 {
@@ -29,6 +30,7 @@ namespace WebDevelopment_project
            selectalert.Visible = false;
            messagealertdone.Visible = false;
             messagealertundone.Visible = false;
+            feedbackdiv.Visible = false;
             if (Environment.MachineName.ToString() == "RAHUL-HP-LAPTOP")
             {
                 // localhost database string
@@ -49,10 +51,14 @@ namespace WebDevelopment_project
             conn.Close();
             GridView1.DataSource = dt;
             GridView1.DataBind();
+            GridView1.Visible = false;
+            GridView2.Visible = false;
+
         }
         protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
             selectalert.Visible = true;
+            GridView1.Visible = true;
             foreach ( DataRow dr in dt.Rows)
             {
                 if (dr["Id"].ToString() == GridView1.Rows[e.NewSelectedIndex].Cells[0].Text)
@@ -97,6 +103,7 @@ namespace WebDevelopment_project
         protected void Close_Click(object sender, EventArgs e)
         {
             selectalert.Visible = false;
+            GridView1.Visible = true;
         }
 
         protected void Deactivate_Click(object sender, EventArgs e)
@@ -117,6 +124,42 @@ namespace WebDevelopment_project
             sql.Parameters.AddWithValue("@userid", User_id.Text);
             sql.ExecuteNonQuery();
             messagealertdone.Visible = true;
+            
+        }
+
+        protected void UserDetails_Click(object sender, EventArgs e)
+        {
+            GridView2.Visible = false;
+            GridView1.Visible = true;
+        }
+        protected void Feedback_Click(object sender, EventArgs e)
+        {
+            GridView1.Visible=false;
+            GridView2.Visible = true;
+            String Xmlpath = "dataxml.xml";
+            XmlTextReader xmlTextReader = new XmlTextReader(Server.MapPath(Xmlpath));
+            DataSet xmlds = new DataSet();
+            xmlds.ReadXml(xmlTextReader);
+            xmlTextReader.Close(); 
+            if (xmlds.Tables.Count !=0)
+            {
+              GridView2.DataSource = xmlds;
+              GridView2.DataBind();
+            }
+        }
+
+        protected void GridView2_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            feedbackdiv.Visible = true;
+            GridView2.Visible = true;
+            feedbackname.Text = GridView2.Rows[e.NewSelectedIndex].Cells[1].Text;
+            feedbackemail.Text = GridView2.Rows[e.NewSelectedIndex].Cells[2].Text;
+            feedbackmessage.Text = GridView2.Rows[e.NewSelectedIndex].Cells[4].Text;
+        }
+        protected void feedbackClosediv_Click(object sender, EventArgs e)
+        {
+            feedbackdiv.Visible = false;
+            GridView2.Visible = true;
         }
     }
 }

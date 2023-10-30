@@ -110,6 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Accountdelete.aspx" />
+    <Content Include="Contactus.aspx" />
+    <Content Include="dataxml.xml" />
     <Content Include="download.svg" />
     <Content Include="favicon_dil.ico" />
     <Content Include="Calculator.aspx" />
@@ -184,6 +186,13 @@
     </Compile>
     <Compile Include="Calculator.aspx.designer.cs">
       <DependentUpon>Calculator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

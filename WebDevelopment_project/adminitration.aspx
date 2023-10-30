@@ -95,6 +95,37 @@
     </div>
 </div>
 
+
+        <!-- ************************************-->
+    <div runat="server" id="feedbackdiv"  class="user-info-modal">
+  <div  class="user-info-modal-dialog">
+    <div  class="user-info-modal-content">
+      <div class="user-info-modal-header">
+        <h2 class="modal-title" id="ModalLabel">User Details</h2>
+      </div>
+          <hr />
+      <div class="user-info-modal-body">
+          <div class="user-info-modal-body-label" >
+<asp:Label ID="Label3" runat="server" CssClass="user-info-modal-body-label" Text="Name"></asp:Label>
+<asp:Label ID="feedbackname" runat="server"></asp:Label>
+ </div>
+<div class="user-info-modal-body-label" >
+<asp:Label ID="Label5" runat="server" CssClass="user-info-modal-body-label" Text="email"></asp:Label>
+<asp:Label ID="feedbackemail" runat="server"></asp:Label>
+ </div>
+<div class="user-info-modal-body-label" >
+<asp:Label ID="Label7" runat="server" CssClass="user-info-modal-body-label" Text="messgae"></asp:Label>
+<asp:Label ID="feedbackmessage" runat="server"></asp:Label>
+</div>
+      </div>
+        <hr />
+      <div class="user-info-modal-footer">
+          <asp:Button ID="feedbackClosediv" CssClass="user-close user-btn " OnClick="feedbackClosediv_Click"  runat="server" Text="Close" />
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- ************************************************* -->
         <section>
             <center>
@@ -102,14 +133,21 @@
                     ADMINISTRATOR
                 </h1>
             </center>
-            <div class="Gridview-div" >
-        <asp:GridView ID="GridView1" CssClass="Gridview" AutoGenerateColumns="false" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" Width="100%" runat="server">
+            <asp:Button ID="UserDetails" OnClick="UserDetails_Click" CssClass="btn btn-primary" runat="server" Text="User Details" />
+            <asp:Button ID="Feedback" OnClick="Feedback_Click" CssClass="btn btn-primary " runat="server" Text="Show User Feedback" />
+            <div class="Gridview-div" runat="server" id="gridviewdiv" >
+        <asp:GridView ID="GridView1" CssClass="Gridview"  AutoGenerateColumns="false" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" Width="100%" runat="server">
         <Columns >
             <asp:BoundField DataField="Id" HeaderStyle-CssClass="Gridview-Header Userid" ItemStyle-CssClass="Gridview-item "  HeaderText="User Id" />
             <asp:BoundField DataField="Name" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" HeaderText="User Name" />
             <asp:BoundField DataField="Email" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" HeaderText="User Email" />
             <asp:CommandField ShowSelectButton="true" HeaderText="Select Account" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" />
         </Columns>
+        </asp:GridView>
+        <asp:GridView ID="GridView2" OnSelectedIndexChanging="GridView2_SelectedIndexChanging" CssClass="Gridview" Width="100%" runat="server">
+            <Columns>
+            <asp:CommandField ShowSelectButton="true" HeaderText="Select Account" HeaderStyle-CssClass="Gridview-Header" ItemStyle-CssClass="Gridview-item" />
+            </Columns>
         </asp:GridView>
             </div>
         </section>
