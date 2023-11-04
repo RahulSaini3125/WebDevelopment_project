@@ -191,3 +191,73 @@ button {
     width:100%;
     height:1000px;
 }
+
+.text-red{
+    color: red;
+}
+
+.card-text {
+    height: 15vh;
+    text-align: center;
+    white-space:break-spaces;
+    overflow:hidden;
+}
+
+.card-title{
+    overflow:hidden;
+    height:50px;
+    white-space:break-spaces;
+}
+
+.card-names{
+    display:block;
+    text-align:left;
+}
+
+.container-fluid {
+    width: auto !important;
+    margin-left: 0 !important;
+}
+    /* Static CSS for styling the servies, about us , contact us */
+
+.section{
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin-top: 60px;
+}
+
+
+
+.headingh1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services-section {
+    background-color: #f9f9f9;
+    margin-top: 60px
+}
+.services-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.services-features{
+    display: inline-block;
+    justify-content: space-between;
+}
+.blue{
+    color:blue;
+}
