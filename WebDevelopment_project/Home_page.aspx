@@ -5,7 +5,7 @@
       <div class="jumbotron">
         <div class="container">
           <h2 class="display-3">Hello,<asp:Label ID="UserName" runat="server" ></asp:Label> </h2>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p>A blog is a website that is updated with new information on an ongoing basis and normally consists of a collection of posts. Blog content is often referred to as entries or “blog posts”. A blog presents information in reverse chronological order and it’s written in an informal or conversational style.</p>
           <p><a class="btn btn-primary btn-lg" href="blog.aspx" role="button">Read Blog &raquo;</a></p>
         </div>
       </div>

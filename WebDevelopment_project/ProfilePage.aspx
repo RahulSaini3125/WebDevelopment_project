@@ -8,7 +8,8 @@
                 <asp:Label ID="messageboxred" runat="server"></asp:Label>
             </div>
         </div>
-<%} %>
+<%}
+%>
      <!--************************************-->
   <div class="container py-5">
     <div class="row">
@@ -57,6 +58,15 @@
               </div>
             </div>
             <hr>
+              <div class="row">
+                 <div class="col-sm-3">
+                     <asp:Label ID="Label1" CssClass="mb-0" runat="server" Text="Total Post Upload"></asp:Label>
+                 </div>
+                 <div class="col-sm-9">
+                       <asp:Label ID="Totalpost" CssClass="text-muted mb-0" runat="server" Text="Label"></asp:Label>
+                </div>
+            </div>
+              <hr />
             <div class="row">
               <div class="col-sm-3">
                   <asp:Label ID="ACDTD" CssClass="mb-0" runat="server" Text="Account Create On"></asp:Label>
@@ -76,8 +86,8 @@
             </div>
               <div>
                   <hr />
-                  <asp:Button ID="Chnage_password_btn" runat="server" OnClick="Chnage_password_btn_Click" CssClass="btn btn-primary" Text="Change Password" />
-                  <asp:Button ID="Delete_btn" runat="server" OnClick="Delete_btn_Click" CssClass="btn btn-danger" Text="Delete Your Account" />
+                  <asp:Button ID="Chnage_password_btn" runat="server" OnClick="Chnage_password_btn_Click" CssClass="btn btn-primary margin-5" Text="Change Password" />
+                  <asp:Button ID="Delete_btn" runat="server" OnClick="Delete_btn_Click" CssClass="btn btn-danger margin-5" Text="Delete Your Account" />
               </div>
           </div>
         </div>
@@ -85,5 +95,22 @@
     </div>
   </div>
 </section>
+    <section class="my-5">
+        <div class="container" >
+            <div class="text-center" >
+                    <h4 class="mb-5"><strong>Your posts</strong></h4>
+                <%if (Totalpost.Text != "0")
+                    {%>
+                    <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+                <%} %>
+                <% else
+                    {  %>
+                <p class="p"> Your didn't Post Any Blog.</p>
+                <p class="p"> Click On Below Button To Post Your First Blog.</p>
+                    <asp:LinkButton ID="ownblog" CssClass="btn btn-primary" OnClick="ownblog_Click" runat="server">Post your first blog</asp:LinkButton>                    
+                <%} %>
+            </div>
+        </div>
+    </section>
 
 </asp:Content>

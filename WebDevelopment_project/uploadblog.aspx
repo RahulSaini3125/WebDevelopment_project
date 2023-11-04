@@ -30,7 +30,7 @@
 </div>
 <div class="form-outline mb-4">
   <label class="form-label" for="form6Example5">Blog Type</label>
-    <asp:DropDownList ID="blogtype"  runat="server">
+    <asp:DropDownList ID="blogtype" OnSelectedIndexChanged="blogtype_SelectedIndexChanged" AutoPostBack="true"   runat="server">
         <asp:ListItem>--SELECT--</asp:ListItem>
         <asp:ListItem>Travel Blogs</asp:ListItem>
         <asp:ListItem>Health and fitness blogs</asp:ListItem>
@@ -50,12 +50,12 @@
     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="blog" CssClass="text-red" ControlToValidate="blogtype" ErrorMessage="Please Select Blog Type"></asp:RequiredFieldValidator>
 
 </div>
-<div class="form-outline mb-4">
+<div runat="server" id="div1"  class="form-outline mb-4">
   <asp:TextBox ID="shortdes" CssClass="form-control" runat="server"></asp:TextBox>
   <label class="form-label" for="form6Example6">Short Description about Blog</label>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" CssClass="text-red" ValidationGroup="blog" ControlToValidate="shortdes" ErrorMessage="Please Enter the Blog Description"></asp:RequiredFieldValidator>
 </div>
-<div class="form-outline mb-4">
+<div runat="server" id="div2" class="form-outline mb-4">
   <asp:TextBox ID="blogcon" CssClass="form-control" TextMode="MultiLine" Rows="4" runat="server"></asp:TextBox>
   <label class="form-label" for="form6Example7"> Your Blog</label>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup="blog" CssClass="text-red" ControlToValidate="blogcon" ErrorMessage="Please Enter the Blog"></asp:RequiredFieldValidator>

@@ -12,12 +12,17 @@
     </div>
     <section class="section">
     <div class="services-content">
-        <h1 class="headingh1"> <asp:Label ID="Titles" runat="server" Text="Label"></asp:Label> </h1>
+        <h1 class="headingh1"> <asp:Label ID="Titles" runat="server"></asp:Label> </h1>
         <div class="services-features">
+            <div class="services-feature">
+                   <p class="p"> 
+                   <asp:Label ID="blogtypelabel" runat="server" ></asp:Label>
+             </p>
+            </div>
             <div class="services-feature">
                 <h3>Description</h3>
                 <p class="p"> 
-                         <asp:Label ID="Shortdes" runat="server" Text="Label"></asp:Label>
+                         <asp:Label ID="Shortdes" runat="server"></asp:Label>
                 </p>
             </div>
             <div class="services-feature">
@@ -27,8 +32,8 @@
                 </p>
             </div>
             <div class="services-feature">
-                <p class="p"><asp:Label ID="datetime" runat="server" Text="Label"></asp:Label> By
-                    <asp:Label ID="upload" CssClass="blue" runat="server" Text="Label"></asp:Label>
+                <p class="p"><asp:Label ID="datetime" runat="server" ></asp:Label> By
+                    <asp:Label ID="upload" CssClass="blue" runat="server" ></asp:Label>
  </p>
             </div>
         </div>

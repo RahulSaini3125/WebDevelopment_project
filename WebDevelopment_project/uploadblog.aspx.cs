@@ -33,6 +33,9 @@ namespace WebDevelopment_project
             conn.Open();
             email.Text = Session["email"].ToString();
             email.Enabled = false;
+            div1.Visible = false;
+            div2.Visible = false;
+            blogsubmit.Visible = false;
         }
         protected void blogsubmit_Click(object sender, EventArgs e)
         {
@@ -58,6 +61,13 @@ namespace WebDevelopment_project
             {
                 messageboxred.Text = "Your Blog Could not upload by same reason. please Try again later";
             }
+        }
+
+        protected void blogtype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            div1.Visible = true;
+            div2.Visible = true;
+            blogsubmit.Visible = true;
         }
     }
 }

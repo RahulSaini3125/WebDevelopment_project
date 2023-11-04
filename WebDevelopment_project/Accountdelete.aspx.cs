@@ -13,6 +13,7 @@ namespace WebDevelopment_project
         SqlConnection connection;
         String ConnectionString;
         SqlCommand sql;
+        SqlCommand SqlCommandd;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["ID"] == null)
@@ -38,8 +39,11 @@ namespace WebDevelopment_project
             {
                 connection.Open();
                 sql = new SqlCommand("delete from dbo.Userinfo where Id = @userid", connection);
+                SqlCommandd = new SqlCommand("delete from dbo.blog where uploadbyid = @userid", connection);
                 sql.Parameters.AddWithValue("@userid", Session["ID"]);
                 sql.ExecuteNonQuery();
+                SqlCommandd.Parameters.AddWithValue("@userid", Session["ID"]);
+                SqlCommandd.ExecuteNonQuery();
                 connection.Dispose();
                 messagebox.Text = "Account Delete";
                 Session["ID"] = null;

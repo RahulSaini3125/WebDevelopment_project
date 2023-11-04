@@ -24,6 +24,7 @@ namespace WebDevelopment_project
                     blog.Text = dr["Content"].ToString();
                     upload.Text = dr["uploadby"].ToString();
                     datetime.Text = dr["uploaddatetime"].ToString();
+                    blogtypelabel.Text = dr["blogtype"].ToString() ;
                 }
             }
         }

@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aboutus.aspx" />
     <Content Include="Accountdelete.aspx" />
     <Content Include="blog.aspx" />
     <Content Include="blogread.aspx" />
@@ -185,6 +186,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accountdelete.aspx.cs">
       <DependentUpon>Accountdelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

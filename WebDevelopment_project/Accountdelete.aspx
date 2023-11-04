@@ -25,7 +25,7 @@
           </div>
           <asp:Button ID="AccountDelete" OnClick="AccountDelete_Click"  type="submit" CssClass="btn btn-danger btn-lg btn-block" runat="server" Text="Delete My Account" />
           <h6>
-    *Note: Your Account Will Delete from our database therefore after deleting You Need to Create New account.
+    *Note: Your Account Will Delete from our database therefore after deleting You Need to Create New account and your post will delete from our end.
 </h6>
       </div>
     </div>

@@ -50,9 +50,11 @@
         <li class="nav-item">
           <a class="nav-link" href="Home_page.aspx">Home</a>
         </li>
+          <!--
         <li class="nav-item">
           <a class="nav-link" href="Calculator.aspx">Calculator</a>
         </li>
+          -->
         <li class="nav-item">
           <a class="nav-link" href="blog.aspx">Blogs</a>
         </li>
@@ -86,7 +88,7 @@
           <div class="btn-group">
     <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <img
-    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
     class="rounded-circle"
     height="25"
     alt="Black and White Portrait of a Man"
