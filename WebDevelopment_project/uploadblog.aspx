@@ -16,7 +16,7 @@
              </div>
          </div>
  <%} %>
-    <div style="margin:80px">
+    <div style="margin:60px">
 <div class="form-outline mb-4">
     <asp:TextBox ID="email" CssClass="form-control" runat="server"></asp:TextBox>
   <label class="form-label" for="form6Example3">Email</label>

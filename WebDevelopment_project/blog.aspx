@@ -17,7 +17,7 @@
     </style>
           </header>
   <!--Main layout-->
-  <main class="my-5">
+  <main class="my-5 margin-all">
         <asp:LinkButton ID="ownblog" CssClass="btn btn-primary" OnClick="ownblog_Click" runat="server">Create Your Own Blog</asp:LinkButton>
     <div class="container">
       <!--Section: Content-->

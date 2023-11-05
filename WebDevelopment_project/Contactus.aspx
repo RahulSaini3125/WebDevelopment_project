@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contactus.aspx.cs" Inherits="WebDevelopment_project.Contactus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!--Section: Contact v.2-->
-<section class="mb-4">
+<section class="margin-all">
              <% if (messageboxred.Text != ""){  %>
          <div class="alert-center">
              <div class="alert alert-danger" role="alert">
