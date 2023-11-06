@@ -21,7 +21,7 @@
 <body>
     <form runat="server">
 
-    <% if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login") {  %>
+    <% if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login"&& Page.Title != "Forget Password") {  %>
     
         <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,7 +43,7 @@
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="Home_page.aspx"> My Site
+      <a class="navbar-brand mt-2 mt-lg-0" href="Home_page.aspx"> .Blog
       </a>
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -100,7 +100,7 @@
   <div class="dropdown-menu dropdown-menu-right">
              <asp:LinkButton CssClass="dropdown-item" ID="LinkButton4" OnClick="Profile_Click" runat="server"> Profile</asp:LinkButton>
 <asp:LinkButton CssClass="dropdown-item" ID="LinkButton5" OnClick="logout_Click" runat="server">Logout</asp:LinkButton>
-<% if (Page.Title != "Registrations" && Page.Title != "Login") {  %>
+<% if (Page.Title != "Registrations" && Page.Title != "Login" && Page.Title != "Forget Password") {  %>
 <asp:HiddenField ID="HiddenField1" runat="server" />
     <% if (HiddenField1.Value == "True"){  %>
 <asp:LinkButton CssClass="dropdown-item" ID="LinkButton6" OnClick="admin_Click" runat="server">Administration</asp:LinkButton>

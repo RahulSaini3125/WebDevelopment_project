@@ -1,4 +1,4 @@
-﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="blogread.aspx.cs" Inherits="WebDevelopment_project.blogread" %>
+﻿ <%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="blogread.aspx.cs" Inherits="WebDevelopment_project.blogread" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
     

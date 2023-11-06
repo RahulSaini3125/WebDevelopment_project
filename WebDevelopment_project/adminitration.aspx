@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="adminitration.aspx.cs" Inherits="WebDevelopment_project.WebForm1" %>
+﻿<%@ Page Title="Admin" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="adminitration.aspx.cs" Inherits="WebDevelopment_project.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Label ID="Admin" runat="server" Visible="false" Enabled="false" ></asp:Label>
     <asp:Label ID="Label2" runat="server"  ></asp:Label>

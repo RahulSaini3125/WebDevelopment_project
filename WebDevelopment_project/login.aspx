@@ -32,7 +32,7 @@
           </div>
 
           <div class="d-flex justify-content-around align-items-center mb-4">
-            <a href="#!">Forgot password?</a>
+            <a href="Forget.aspx">Forgot password?</a>
           </div>
 
           <!-- Submit button -->

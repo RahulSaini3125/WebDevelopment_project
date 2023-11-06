@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProfilePage.aspx.cs" Inherits="WebDevelopment_project.ProfilePage" %>
+﻿<%@ Page  Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProfilePage.aspx.cs" Inherits="WebDevelopment_project.ProfilePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
  <section>
@@ -76,22 +76,13 @@
               </div>
             </div>
             <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                  <asp:Label ID="Account_statusD" CssClass="mb-0" runat="server" Text="Account Status"></asp:Label>
-              </div>
-              <div class="col-sm-9">
-                  <asp:Label ID="Account_status" CssClass="text-muted mb-0" runat="server" Text="Label"></asp:Label>
-              </div>
-            </div>
               <div>
-                  <hr />
                   <asp:Button ID="Chnage_password_btn" runat="server" OnClick="Chnage_password_btn_Click" CssClass="btn btn-primary margin-5" Text="Change Password" />
                   <asp:Button ID="Delete_btn" runat="server" OnClick="Delete_btn_Click" CssClass="btn btn-danger margin-5" Text="Delete Your Account" />
               </div>
           </div>
-        </div>
-      </div>
+            </div>
+          </div>
     </div>
   </div>
 </section>

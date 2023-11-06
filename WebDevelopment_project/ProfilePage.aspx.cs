@@ -28,8 +28,8 @@ namespace WebDevelopment_project
             displayName.Text = Session["Name"].ToString();
             FullName.Text = Session["Name"].ToString();
             Id.Text = Session["Id"].ToString();
-            Account_status.Text = Session["Status"].ToString();
             ACDT.Text = Session["Create_date"].ToString();
+            Page.Title = Session["Name"].ToString();
 
             if (Environment.MachineName.ToString() == "RAHUL-HP-LAPTOP")
             {

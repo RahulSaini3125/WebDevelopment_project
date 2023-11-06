@@ -20,6 +20,7 @@ namespace WebDevelopment_project
                 if (dr["Id"].ToString() == Session["ReadID"].ToString())
                 {
                     Titles.Text = dr["Title"].ToString();
+                    Page.Title = dr["Title"].ToString();
                     Shortdes.Text = dr["Short_Content"].ToString();
                     blog.Text = dr["Content"].ToString();
                     upload.Text = dr["uploadby"].ToString();

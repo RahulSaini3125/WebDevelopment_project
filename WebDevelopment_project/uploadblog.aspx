@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="uploadblog.aspx.cs" Inherits="WebDevelopment_project.uploadblog" %>
+﻿<%@ Page Title="Upload Your Blog" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="uploadblog.aspx.cs" Inherits="WebDevelopment_project.uploadblog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <!-- Message Box Start -->
  <% if (messagebox.Text != "")

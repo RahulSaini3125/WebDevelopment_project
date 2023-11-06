@@ -131,6 +131,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Forget.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home_page.aspx" />
     <Content Include="login.aspx" />
@@ -150,6 +151,7 @@
     <Content Include="adminitration.aspx" />
     <None Include="Properties\PublishProfiles\WebDevelopemtWebSite - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\email.js" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -237,6 +239,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forget.aspx.cs">
+      <DependentUpon>Forget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forget.aspx.designer.cs">
+      <DependentUpon>Forget.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

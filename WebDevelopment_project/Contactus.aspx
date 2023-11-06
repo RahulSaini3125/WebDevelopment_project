@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contactus.aspx.cs" Inherits="WebDevelopment_project.Contactus" %>
+﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contactus.aspx.cs" Inherits="WebDevelopment_project.Contactus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!--Section: Contact v.2-->
 <section class="margin-all">

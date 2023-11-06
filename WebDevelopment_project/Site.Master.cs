@@ -17,7 +17,7 @@ namespace WebDevelopment_project
    
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login")
+            if (Page.Title != "Registrations" && Page.Title != "Account Delete" && Page.Title != "Rest Password" && Page.Title != "Login" && Page.Title != "Forget Password")
             {
                 HiddenField1.Value = Session["AdminAccess"].ToString();
             }
